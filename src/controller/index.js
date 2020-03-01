@@ -1,17 +1,17 @@
 const userList = [
-  { id: '1', name: '최영훈A', engName: 'JeffChoi' },
-  { id: '2', name: '최영훈B', engName: 'JeffChoi' },
-  { id: '3', name: '최영훈C', engName: 'JeffChoi' },
+  { id: "1", name: "유승진A", engName: "smooth" },
+  { id: "2", name: "유승진B", engName: "smooth" },
+  { id: "3", name: "유승진C", engName: "smooth" }
 ];
 
-const getUsers = (ctx) => {
+const getUsers = ctx => {
   ctx.body = userList;
 };
 
-const getUser = (ctx) => {
+const getUser = ctx => {
   const { id } = ctx.params;
 
-  ctx.body = userList.filter((user) => user.id === id);
+  ctx.body = userList.filter(user => user.id === id);
 };
 
 module.exports = {
